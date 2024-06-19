@@ -1,16 +1,24 @@
 import { UUID } from "crypto";
+import { subscribe } from "diagnostics_channel";
+import { title } from "process";
 
 export class Post {
-	AuthorID:UUID
+	AuthorID:string
 	CommuityName:string
-	Description:string
+	Title:string
+	Subtitle:string
+	Content:string
+	ImageIDs:string[]
 	Like:number
-	PostCommentID:UUID
+	PostCommentID:string
 	Visible:boolean
-	constructor(authorID:UUID, commuityName:string, description:string, like:number, postCommentID:UUID, visible:boolean){
+	constructor(authorID:string, commuityName:string, title:string, subtitle:string, description:string, imageIDs:string[], like:number, postCommentID:string, visible:boolean){
 		this.AuthorID = authorID
 		this.CommuityName = commuityName
-		this.Description = description
+		this.Title = title
+		this.Subtitle = subtitle
+		this.Content= description
+		this.ImageIDs = imageIDs
 		this.Like = like
 		this.PostCommentID = postCommentID
 		this.Visible = visible

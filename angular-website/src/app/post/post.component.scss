@@ -1,0 +1,13 @@
+:host {	
+	display: flex;  
+	justify-content: center;
+}
+mat-card {
+	width: 60%;
+}
+
+mat-card-content {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
